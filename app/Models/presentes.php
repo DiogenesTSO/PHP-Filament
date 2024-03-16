@@ -15,4 +15,13 @@ class presentes extends Model
         'descricao',
         'imagem',
     ];
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::saving(function ($presentes) {
+            $presentes->descricao = strip_tags($presentes->descricao);
+        });
+    }
 }

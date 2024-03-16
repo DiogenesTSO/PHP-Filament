@@ -36,8 +36,7 @@ class PresentesResource extends Resource
                     TextInput::make('nome')->required(),
                         TextInput::make('categoria')->required(),
                         RichEditor::make('descricao')->required(),
-                       // FileUpload::make('imagem')->imagem(),
-                        //Toggle::make('Cadastrar')
+                        FileUpload::make('imagem'),
                 ])
             ]);
     }
